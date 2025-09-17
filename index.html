@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance Kart: The Prisha Quest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>Finance Kart: The Prisha Quest</h1>
+      <div class="controls">
+        <button id="startButton" type="button">Start Race</button>
+        <button id="pauseButton" type="button">Pause</button>
+        <button id="resumeButton" type="button">Resume</button>
+        <button id="restartButton" type="button">Restart</button>
+      </div>
+    </header>
+
+    <section class="dashboard">
+      <article class="scorecard">
+        <h2>Race Telemetry</h2>
+        <dl>
+          <div>
+            <dt>Level</dt>
+            <dd id="level">–</dd>
+          </div>
+          <div>
+            <dt>Score</dt>
+            <dd id="score">0</dd>
+          </div>
+          <div>
+            <dt>Capital Buffer</dt>
+            <dd id="capital">💰💰💰</dd>
+          </div>
+        </dl>
+      </article>
+      <article class="objectives">
+        <h2>Current Objectives</h2>
+        <ul id="objectivesList"></ul>
+      </article>
+      <article class="narrative">
+        <h2>Track Commentary</h2>
+        <div id="log" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section class="track">
+      <canvas id="gameCanvas" width="640" height="720" aria-label="Finance Kart race track" role="img"></canvas>
+      <aside class="legend">
+        <h2>Legend</h2>
+        <ul>
+          <li><span class="icon coin"></span> Growth Investments (collect for points)</li>
+          <li><span class="icon hazard"></span> Risk Events (avoid to protect capital)</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="how-to">
+      <h2>How to Play</h2>
+      <p>
+        Steer Prisha’s finance kart with the <strong>left</strong> and <strong>right arrow keys</strong> or <strong>A / D</strong>.
+        Collect growth investments to unlock achievements and advance through each career level.
+        Avoid risk events—each hit drains your capital buffer. Clear all levels to reach the Prisha Advantage finish line.
+      </p>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
